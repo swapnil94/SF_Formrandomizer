@@ -27,7 +27,6 @@ function myfun(){
         if(e.val() == null || e.val() == ""){
             if(e.parent().attr("class") == "lookupInput"){
                 //Skip lookup field
-                console.log('lookup'+e);
             }else if(labelMap[e.attr("id")].toLowerCase().includes("email")){
                 //Email field
                 e.val("test@email.com");
