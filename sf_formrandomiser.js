@@ -17,9 +17,6 @@ function loadScript( url, callback ) {
 
   script.src = url;
   document.getElementsByTagName( "head" )[0].appendChild( script );
-  $("#sffr_js").remove();
-  $("#sffr_main").remove();
-  console.log('doneeee');
 }
 
 function myfun(){
@@ -61,6 +58,7 @@ function myfun(){
             e.find(":nth-child(2)").prop("selected", true);
         }
     })
+    $("#sffr_main, #sffr_js").remove();
 }
 
 // call the function...
