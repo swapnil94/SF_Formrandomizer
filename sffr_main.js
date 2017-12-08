@@ -30,11 +30,14 @@ function myfun(){
             }else if(labelMap[e.attr("id")].toLowerCase().includes("email")){
                 //Email field
                 e.val("test@email.com");
+            }else if(labelMap[e.attr("id")].toLowerCase().includes("phone")){
+                //Phone Number field
+                e.val(Math.round(Math.random()*10000000));
             }else if(labelMap[e.attr("id")].toLowerCase().includes("number")){
                 //Number field
                 e.val(Math.round(Math.random()*1000));
             }else if(labelMap[e.attr("id")].toLowerCase().includes("%")){
-                //Date field
+                //Percent field
                 e.val(Math.round(Math.random()*100));
             }else if(e.parent().attr("class").includes("dateInput")){
                 //Date field
