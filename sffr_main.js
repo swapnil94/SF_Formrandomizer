@@ -40,7 +40,7 @@ function myfun(){
                 //Date field
                 e.next().find("a").each((i1,e1)=>{ e1.click(); });
             }else{
-                e.val("test123");
+                e.val("test"+Math.round(Math.random()*1000));
             }
         }
     })
