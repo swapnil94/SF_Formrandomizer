@@ -30,8 +30,8 @@ function myfun(){
             }else if(labelMap[e.attr("id")].toLowerCase().includes("email")){
                 //Email field
                 e.val("test@email.com");
-            }else if(labelMap[e.attr("id")].toLowerCase().includes("phone")){
-                //Phone Number field
+            }else if(labelMap[e.attr("id")].toLowerCase().includes("phone") || labelMap[e.attr("id")].toLowerCase().includes("mobile")){
+                //Phone/Mobile Number field
                 e.val(Math.round(Math.random()*10000000));
             }else if(labelMap[e.attr("id")].toLowerCase().includes("number")){
                 //Number field
