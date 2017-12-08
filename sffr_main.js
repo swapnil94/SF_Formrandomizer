@@ -23,6 +23,7 @@ function myfun(){
     labelMap = {}
     $(".pbBody").children().find("label").each((index, elem)=>{ labelMap[$(elem).attr("for")] = $(elem).text() });
     $(".pbBody").children().find("input[type=text],textarea").each((index, elem) =>{
+        //text fields
         e = $(elem);
         if(e.val() == null || e.val() == ""){
             if(e.parent().attr("class") == "lookupInput"){
@@ -49,12 +50,20 @@ function myfun(){
     })
 
     $(".pbBody").children().find("input[type=checkbox]").each((index, elem) => {
+        //checkbox
         if(index%2 == 0 && !elem.checked){
             elem.checked = true;
         }
     })
-
+    
+    $("optgroup").each((i,e)=>{if(i%2 == 0){
+        //Multi select picklist
+        $(e).children()[0].selected = true;
+        $(e).parent().trigger("dblclick");
+    }});
+  
     $(".pbBody").children().find("select").each((index, elem) => {
+        //picklist
         e = $(elem);
         if(e.css("display") == "none" || e.attr("multiple") || e.attr("size") > 1){
         }else{
